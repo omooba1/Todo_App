@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
     fun logIn(userName: String, passWord: String) {
         if (isValidCredentials(userName, passWord)) {
-            val intent: Intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             intent.putExtra("username", userName)
             startActivity(intent)
         } else {
