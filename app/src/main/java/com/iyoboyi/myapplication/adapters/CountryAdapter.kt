@@ -12,6 +12,7 @@ class CountryAdapter(val countries: List<Country>) :
     class CountryViewHolder(var binding: CountryItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(country: Country) {
+            binding.countryFlag.setImageResource(country.flag)
             binding.countryContinent.text = country.continent
             binding.countryName.text = country.name
             binding.countryPopulation.text = country.population.toString()
